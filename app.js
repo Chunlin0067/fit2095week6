@@ -3,6 +3,8 @@ let app = express();
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
 const url = 'mongodb://localhost:27017/';
+var util= require('util');
+var encoder = new util.TextEncoder('utf-8');
 var db, bookCollection;
 MongoClient.connect(url, {useNewUrlParser: true}, function (err, client) {
   if (err) {
