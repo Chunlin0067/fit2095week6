@@ -1,0 +1,45 @@
+<html>
+    <style>
+        body {
+    background-color: bisque;
+    text-align: center;
+}
+p{
+
+background-color: hsla(299, 57%, 38%, 0.733);
+border: none;
+color: #FFFFFF;
+text-align: center;}
+    </style>
+<head>
+    <link rel="stylesheet" href="books.css">
+</head>
+
+<body>
+    <img src="homepagelogo.jpg" width="1264px"/>
+    <h1 style="color: rgb(35, 35, 248);font-family: fantasy;">Here are all the books</h1>
+    <table id="t01">
+        <tr>
+            <th>title</th>
+            <th>author</th>
+            <th>topic</th>
+            <th>date of publication</th>
+            <th>summary</th>
+        </tr>
+        <% for(let i=0;i<books.length;i++){ %>
+        <tr>
+            <td><%= books[i].title %></td>
+            <td><%= books[i].author %></td>
+            <td><%= books[i].topic %></td>
+            <td><%= books[i].date %></td>
+            <td><%= books[i].summary %></td>
+        </tr>
+        <%} %>
+    </table>
+    <p>
+        Click <a href="/" style="color: #fafafa;"> HERE</a> to return to home page!!</p>
+</body>
+
+
+
+</html>
